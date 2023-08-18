@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+.typing-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125vh;
+    background-color: #ffffff;
+}
+
+.typing-text {
+    font-family: 'Ms Madi', sans-serif;
+    font-size: 54px;
+    color: #FFFFFF;
+    opacity: 0;
+    animation: typing-fade-in 2s ease-out forwards;
+    animation-delay: 2s;
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    animation: expand-background 2s ease-out forwards;
+}
+
+.splash-name {
+    font-family: 'Ms Madi', sans-serif;
+    font-size: 48px;
+    color: #FFFFFF;
+    opacity: 0;
+    white-space: nowrap;
+    animation: name-fade-in 2s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.splash-name span {
+    display: inline-block;
+    opacity: 0;
+    animation: letter-appear 0.5s ease-out forwards;
+    animation-delay: calc(0.1s * var(--index));
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: circle-to-full 2s ease-out forwards;
+    animation-delay: 2s;
+}
+
+@keyframes square-to-circle {
+    0% {
+        width: 100%;
+        height: 100%;
+        border-radius: 10;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+@font-face {
+    font-family: 'Mr Dafoe';
+    src: url(D:\Projects\Pythons%20PRojs\PortFolio%20Site\html5up-escape-velocity\Mr_Dafoe\MrDafoe-Regular.ttf) format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Herr_Von_Muellerhoff';
+    src: url(D:\Projects\Pythons%20PRojs\PortFolio%20Site\html5up-escape-velocity\Mr_Dafoe\HerrVonMuellerhoff-Regular.ttf) format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Mr_De_Haviland';
+    src: url(D:\Projects\Pythons%20PRojs\PortFolio%20Site\html5up-escape-velocity\Mr_Dafoe\MonsieurLaDoulaise-Regularttf) format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Ms_Madi';
+    src: url(D:\Projects\Pythons%20PRojs\PortFolio%20Site\html5up-escape-velocity\Mr_Dafoe\MsMadi-Regular.ttf) format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Parisienne-Regular';
+    src: url(D:\Projects\Pythons%20PRojs\PortFolio%20Site\html5up-escape-velocity\Mr_Dafoe\Parisienne-Regular.ttf) format('truetype');
+
+}
+/* Add the new keyframe for shrinking the splash screen */
+@keyframes shrink-splash {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+        border-radius: 70%;
+    }
+}
+
+
+@keyframes letter-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0; /* Start with zero width */
+    }
+    to {
+        width: 100%; /* Increase width to reveal the full text */
+    }
+}
+@keyframes typing-fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes blink-caret {
+    50% {
+        border-color: transparent; /* Hide the caret at the midpoint of the animation */
+    }
+}
+@keyframes expand-background_reverse {
+    0% {
+        border-radius: 0%;
+    }
+    100% {
+        border-radius: 100;
+    }
+}
+@keyframes expand-background {
+    0% {
+        border-radius: 50%;
+    }
+    100% {
+        border-radius: 0;
+    }
+}
+
+
+@keyframes circle-to-full {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes name-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes circle-to-zero {
+    0% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        border-radius: 0;
+    }
+    50% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}

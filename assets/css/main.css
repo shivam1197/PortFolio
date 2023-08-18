@@ -37,6 +37,37 @@ ol, ul {
 	list-style: none;
 }
 
+/* .logo_git {
+	float: left;
+	margin-right: 10px;
+  } */
+  .button_wide {
+	float: right;
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #f98780;
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	border-radius: 5px;
+	min-width: 8em;
+	text-align: center; /* Center align the text */
+	
+}
+
+/* Add responsive styles using media queries */
+@media screen and (max-width: 768px) {
+	.button_wide {
+		margin-left: 0; /* Reset margin for small screens */
+		margin-top: 10px; /* Add a margin at the top for spacing */
+		display: block; /* Display as a block to take full width */
+		
+	}
+}
+.highlight {
+
+	font-weight: bold;
+}
 blockquote, q {
 	quotes: none;
 }
